@@ -27,8 +27,5 @@ app.get('/', (req, res) => {
 });
 
 
-
-
-
 // This means the server is running on port 3000
 app.listen(4000)
