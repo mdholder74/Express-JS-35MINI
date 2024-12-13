@@ -7,11 +7,14 @@ const router = express.Router();
 
 // GET USERS ROUTE
 router.get('/', (req, res) => {
+    console.log("GET USERS")
+    res.send('Get Users')
 
 })
 
 //GET NEW USERS ROUTE
 router.get('/new', (req, res) => {
+    res.send('New User')
 
 })
 
@@ -29,35 +32,35 @@ router.post('/', (req, res) => {
 // This route is used to get a specific user by ID
 //DELETE USERS ID ROUTE
 // This route is used to get a specific user by ID
-router.route('/:id')
-    .get((req, res) => {
-        res.send(`Get User by ID ${req.params.id}`)
-    })
-    .put((req, res) => {
-        res.send(`Update User by ID ${req.params.id}`)
-    })
-    .delete((req, res) => {
-        res.send(`Delete User by ID ${req.params.id}`)
-    })
+// router.route('/:id')
+//     .get((req, res) => {
+//         res.send(`Get User by ID ${req.params.id}`)
+//     })
+//     .put((req, res) => {
+//         res.send(`Update User by ID ${req.params.id}`)
+//     })
+//     .delete((req, res) => {
+//         res.send(`Delete User by ID ${req.params.id}`)
+//     })
 
 // //GET USERS ID ROUTE
 // // This route is used to get a specific user by ID
-// router.get('/:id', (req, res) => {
-//     res.send(`Get User by ID ${req.params.id}`)
+router.get('/:id', (req, res) => {
+    res.send(`Get User by ID ${req.params.id}`)
 
-// })
+})
 // //UPDATE USERS ID ROUTE
 // // This route is used to get a specific user by ID
-// router.put('/:id', (req, res) => {
-//     res.send('Update User by ID')
+router.put('/:id', (req, res) => {
+    res.send('Update User by ID')
 
-// })
+})
 // //DELETE USERS ID ROUTE
-// // This route is used to get a specific user by ID
-// router.delete('/:id', (req, res) => {
-//     res.send(`Delete User by ID ${req.params.id}`)
+// This route is used to get a specific user by ID
+router.delete('/:id', (req, res) => {
+    res.send(`Delete User by ID ${req.params.id}`)
 
-// })
+})
 
 
 // Define an array of user objects, where each object represents a user with a "name" property.
