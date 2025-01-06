@@ -21,9 +21,9 @@ app.set('view engine', 'ejs');
 // Format for route creation app.method('route path/URL path', /handler/callback)
 // app is the instance of express, method is the HTTP request method, route path is the URL path, and handler is the function that is called when the route is matched.
 // logger is a middleware function that logs the URL of the request to the console.
-app.get('/', logger, (req, res) => {
-    res.render('index', { title: 'Welcome to EJS' });
-});
+// app.get('/', logger, (req, res) => {
+//     res.render('index', { title: 'Welcome to EJS' });
+// });
 
 // IMPORT ROUTES
 // Imports the router module from the users.js file
@@ -34,10 +34,10 @@ app.use('/users', userRouter);
 
 // function logger consoles the URL of the request to the console
 // next() is a function that calls the next middleware function in the stack. If there are no more middleware functions in the stack, it calls the route handler.
-function logger(req, res, next) {
-    console.log(req.originalUrl);
-    next();
-}
+// function logger(req, res, next) {
+//     console.log(req.originalUrl);
+//     next();
+// }
 
 
 // This means the server is running on port 3000

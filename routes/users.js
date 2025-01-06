@@ -13,8 +13,12 @@ router.get('/', (req, res) => {
 })
 
 //GET NEW USERS ROUTE
+// This sets up a route that listens for GET requests to the /new endpoint.
+// The callback function is executed whenever a GET request is made to the path /new.
+// res.render('users/new') This tells Express to render a template named new.ejs located inside the users folder.
+// When a GET request is made to /new, the server responds by rendering the new.ejs view.
 router.get('/new', (req, res) => {
-    res.send('New User')
+    res.render('users/new')
 
 })
 
